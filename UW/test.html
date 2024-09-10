@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anonymous Website</title>
+    <style>
+        #text {
+            font-size: 24px;
+            font-family: Arial, sans-serif;
+        }
+
+        /* กำหนดสีของปุ่มลิงก์ */
+        a.anonymous-link {
+            color: aqua;
+            text-decoration: none; /* เอาเส้นใต้ของลิงก์ออก */
+        }
+
+        a.anonymous-link:hover {
+            text-decoration: underline; /* เพิ่มเส้นใต้เมื่อเอาเมาส์ชี้ */
+        }
+    </style>
+</head>
+<body>
+    <div id="text"></div>
+
+    <script>
+        var text = "This website was made by ";
+        var linkText = "Anonymous";
+        var link = "<a href='https://example.com' class='anonymous-link' target='_blank'>" + linkText + "</a>";
+        var fullText = text; // เริ่มต้นด้วยข้อความที่ไม่มีลิงก์
+        var index = 0;
+        var speed = 100; // ความเร็วในการแสดงผล (100 milliseconds)
+
+        function typeWriter() {
+            if (index < text.length) {
+                document.getElementById("text").innerHTML += text.charAt(index);
+                index++;
+                setTimeout(typeWriter, speed);
+            } else if (index === text.length) {
+                // เมื่อข้อความปกติพิมพ์จบ ให้เพิ่มลิงก์แทนคำว่า Anonymous
+                document.getElementById("text").innerHTML += link;
+            }
+        }
+
+        // เริ่มฟังก์ชันพิมพ์เมื่อโหลดหน้าเว็บเสร็จ
+        window.onload = typeWriter;
+    </script>
+</body>
+</html>

@@ -24,12 +24,12 @@
 
        
         /* กำหนดสีของปุ่มลิงก์ */
-        a.Pitt-link {
+        a.anonymous-link {
             color: aqua;
             text-decoration: none; /* เอาเส้นใต้ของลิงก์ออก */
         }
 
-        a.Pitt-link:hover {
+        a.anonymous-link:hover {
             text-decoration: underline; /* เพิ่มเส้นใต้เมื่อเอาเมาส์ชี้ */
         }
 
@@ -74,15 +74,15 @@
 
         // เมื่อกดปุ่มครั้งที่ 5 จะลิงก์ไปยังเว็บไซต์ใหม่
         if (clickCount === 5) {
-            window.location.href = 'main/main.html'; // เปลี่ยนเป็น URL ที่ต้องการ
+            window.location.href = 'upandwinnie.html'; // เปลี่ยนเป็น URL ที่ต้องการ
         }
     }
    }
    
       var text = "This website was made by ";
     
-        var linkText = "Pitt";
-        var link = "<a href='https://www.youtube.com/watch?v=dQw4w9WgXcQ&pp=ygUKcmljayByb2xsIA%3D%3D' class='Pitt-link' target='_blank'>" + linkText + "</a>";
+        var linkText = "Anonymous";
+        var link = "<a href='https://www.youtube.com/watch?v=dQw4w9WgXcQ&pp=ygUKcmljayByb2xsIA%3D%3D' class='anonymous-link' target='_blank'>" + linkText + "</a>";
 
         var fullText = text; // เริ่มต้นด้วยข้อความที่ไม่มีลิงก์
         var index = 0;
@@ -119,7 +119,7 @@
     
 </script>
 
-<div class="centered-text" id="colorText" style="font-family: monospace;color: white;">Copyright 2024 All Right Reserved By Pitt<br> <a style="color: aqua;" href="UW/index.html" >Click here</a></div>
+<div class="centered-text" id="colorText" style="font-family: monospace;color: white;">Copyright 2024 All Right Reserved By <a style="color: rgb(162, 199, 0);"  href="index.html">XXXXX</a> </div>
 
 </body>
 </html>
