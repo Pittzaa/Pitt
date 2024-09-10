@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ตรวจสอบรหัสผ่าน</title>
+</head>
+<body>
+    <input type="password" id="password" placeholder="กรอกรหัสผ่าน">
+    <button onclick="checkPassword()">ตรวจสอบ</button>
+    <p id="message"></p>
+
+    <script>
+        function checkPassword() {
+            const passwordInput = document.getElementById("password");
+            const message = document.getElementById("message");
+            const correctPassword = "remoteconnectschool@gmail.com"; // เปลี่ยนเป็นรหัสผ่านจริงที่ต้องการ
+
+            if (passwordInput.value === correctPassword) {
+                // Redirect to another website
+                window.location.href = "https://www.example.com"; // เปลี่ยนเป็น URL ที่ต้องการ
+
+                // Save password to a file (ไม่แนะนำสำหรับรหัสผ่านจริง)
+                // const fs = require('fs'); // สำหรับ Node.js
+                // fs.writeFileSync('passwords.txt', passwordInput.value);
+            } else {
+                message.textContent = "Wrong password";
+            }
+        }
+    </script>
+</body>
+</html>
