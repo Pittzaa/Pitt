@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .rainbow-text{
+            font-family: monospace;
+            font-size: 24px;
+            font-weight: bold;
+        }
+    body{
+        animation: bgcolor 10s infinite linear;
+    }
+    @keyframes bgcolor {
+        0%{background-color:black;}
+        33.33%{background-color: rgb(73, 0, 62);}
+        66.67%{background-color: rgb(43, 0, 71);}
+        100%{background-color: black;}
+    }
+    </style>
+    <script>
+        function getRandomRGBValue() {
+            return Math.floor(Math.random() * 256);  // สุ่มค่า 0 ถึง 255
+        }
+
+        function changeColor() {
+            const r = getRandomRGBValue();
+            const g = getRandomRGBValue();
+            const b = getRandomRGBValue();
+            const rgbColor = `rgb(${r}, ${g}, ${b})`;
+            document.getElementById('colorText').style.color = rgbColor;
+        }
+         setInterval(changeColor, 200);  // เปลี่ยนสีทุก 1 วินาที
+         //----------------------------------------------------------------
+         
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mali:ital,wght@0,700;1,200&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1 id="colorText" style="font-family: Mali;text-align: center;">รวมทุกหน้าอยู่ในนี้</h1>
+    <h2 style="text-align: center;font-family: Mali; color: white;" >U&W <br> <a style="color: aqua;" href="upandwinney/password.html">Click here</a></h2>
+    <br>
+    <h2 style="text-align: center;font-family: Mali;color: white;" >Peam&chompu <br> <a style="color: aquamarine;" href="peamandchompu/password.html">Click here</a></h2>
+
+
+
+</body>
+
+
+
+</html>
